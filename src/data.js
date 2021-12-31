@@ -17,10 +17,10 @@ function chillHop() {
 		},
 		{
 			name: "So Different",
-			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			cover:"https://storage.googleapis.com/nicoroc_audio/!%202%20nicoroc%20test.png",
 			artist: "Nicoroc",
-			album: "V R I L",
-			audio: "https://storage.cloud.google.com/nicoroc_audio/So%20Different_MSTR_4.wav?authuser=1&_ga=2.48103079.-1214993143.1640922168",
+			album: "single",
+			audio: "https://storage.googleapis.com/nicoroc_audio/So%20Different_MSTR_4.wav",
 			color: ["#000000", "#7E3517"],
 			id: uuidv4(),
 			active: false,

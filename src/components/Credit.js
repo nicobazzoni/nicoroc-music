@@ -4,12 +4,10 @@ const Credit = () => {
 	return (
 		<CreditContainer>
 			<Link href="" target="_blank">
-				Made by NicoRoc
+				Made by nicoroc
 			</Link>
-			<br></br>
-			<Link href="https://github.com/Nicobazzoni/nicoroc-music" target="_blank">
-				Github repository
-			</Link>
+	
+			
 		</CreditContainer>
 	);
 };

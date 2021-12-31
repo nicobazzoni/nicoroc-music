@@ -5,22 +5,23 @@ function chillHop() {
 
 
 	return [
-		{
-			name: "Malice",
-			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
-			artist: "Nicoroc",
-			album: "V R I L",
-			audio: "https://storage.googleapis.com/nicoroc_audio/Malice%20Nico%20-1125ZMASTER.mp3",
-			color: ["#000000", "#7E3517"],
-			id: uuidv4(),
-			active: true,
-		},
+	
 		{
 			name: "So Different",
 			cover:"https://storage.googleapis.com/nicoroc_audio/!%202%20nicoroc%20test.png",
 			artist: "Nicoroc",
 			album: "single",
 			audio: "https://storage.googleapis.com/nicoroc_audio/So%20Different_MSTR_4.wav",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Nightrider",
+			cover:"https://storage.googleapis.com/nicoroc_audio/Attachment_1612947415.jpeg",
+			artist: "Nicoroc",
+			album: "single",
+			audio: "https://storage.googleapis.com/nicoroc_audio/nico%20night%20rider%20zmix-feb3-master2.mp3",
 			color: ["#000000", "#7E3517"],
 			id: uuidv4(),
 			active: false,
@@ -125,7 +126,16 @@ function chillHop() {
 			id: uuidv4(),
 			active: false,
 		},
-		
+		{
+			name: "Malice",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/Malice%20Nico%20-1125ZMASTER.mp3",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: true,
+		},
 		
 		
 		//ADD MORE HERE

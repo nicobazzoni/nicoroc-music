@@ -7,6 +7,7 @@ const Song = ({ currentSong }) => {
 			<Img src={currentSong.cover} alt={currentSong.name}></Img>
 			<H1>{currentSong.name}</H1>
 			<H2>{currentSong.artist}</H2>
+			<H3>{currentSong.album}</H3>
 		</SongContainer>
 	);
 };
@@ -35,6 +36,11 @@ const H1 = styled.h2`
 
 const H2 = styled.h3`
 	font-size: 1rem;
+`;
+const H3 = styled.h3`
+padding: 2rem  1rem 1rem;
+	font-size: 1rem;
+	color: black;
 `;
 
 export default Song;

@@ -1,78 +1,133 @@
 import { v4 as uuidv4 } from "uuid";
-import buried from './audio/buried.wav'
+
 function chillHop() {
+	
+
+
 	return [
 		{
-			name: "Beaver Creek",
-			cover:
-				"https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-			artist: "Aso, Middle School, Aviino",
-			audio: "",
-			color: ["#205950", "#2ab3bf"],
+			name: "Malice",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/Malice%20Nico%20-1125ZMASTER.mp3",
+			color: ["#000000", "#7E3517"],
 			id: uuidv4(),
 			active: true,
 		},
 		{
-			name: "Daylight",
-			cover:
-				"https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-			artist: "Aiguille",
-			audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
-			color: ["#EF8EA9", "#ab417f"],
-			id: uuidv4(),
-			active: false,
-		},
-		{
-			name: "Keep Going",
-			cover:
-				"https://f4.bcbits.com/img/a4097316864_10.jpg",
-			artist: "Swørn",
-			audio: "https://mp3.chillhop.com/serve.php/?mp3=9222",
-			color: ["#CD607D", "#c94043"],
-			id: uuidv4(),
-			active: false,
-		},
-		{
-			name: "Nightfall",
-			cover:
-				"https://f4.bcbits.com/img/a4097316864_10.jpg",
-			artist: "Aiguille",
-			audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
-			color: ["#EF8EA9", "#ab417f"],
-			id: uuidv4(),
-			active: false,
-		},
-		{
-			name: "Reflection",
-			cover:
-				"https://f4.bcbits.com/img/a4097316864_10.jpg",
-			artist: "Swørn",
-			audio: "https://s4.bcbits.com/bundle/bundle/1/masonry-9b509fa47727256823bb211fa72001c4.js",
-			color: ["#CD607D", "#c94043"],
-			
-			active: false,
-		},
-		{
-			name: "take back my life",
-			cover:
-				"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			name: "So Different",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
 			artist: "Nicoroc",
-			audio: {buried},
-			color: ["#205950", "#2ab3bf"],
-			
+			album: "V R I L",
+			audio: "https://storage.cloud.google.com/nicoroc_audio/So%20Different_MSTR_4.wav?authuser=1&_ga=2.48103079.-1214993143.1640922168",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
 			active: false,
-      
 		},
-    {
-			name: "Malice",
-			cover:
-				"https://f4.bcbits.com/img/a4097316864_10.jpg",
+		{
+			name: "Take Back My Life",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
 			artist: "Nicoroc",
-			audio: "https://t4.bcbits.com/stream/8ded920c1289708e696bd39e829b9eb1/mp3-v0/3417649753?p=1&ts=1640838157&t=8d3db4c9a9bed2fef0af0319545747ff1dd142b9&token=1640838157_1cbac82b9e262858c500d8dbb8c8be3a50b3e06f",
-			color: ["#CD607D", "#c94043"],
-			
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/TakeBackMyLife-1209ZMASTER.mp3",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
 			active: false,
 		},
+		{
+			name: "Courier",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/Courier%20Nico%20-1125ZMASTER.mp3",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Buried Alive",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/BurriedAlive%20-%201119ZMASTER%20.mp3",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Imperium",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/Imperium%20Nico%20-1125ZMASTER.wav",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Revival",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/Revival-1209ZMASTER.wav",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Rope",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/Rope%20-1220ZMASTER%20(1).wav",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Never Afraid",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/NeverAfraid-1209ZMASTER%20(1).wav",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "NME",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/Nme-1206ZMASTER.mp3",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Passing My Life By",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/PassingMyLifeBy-1206ZMASTER.wav",
+			color: "#6E0202",
+			id: uuidv4(),
+			active: false,
+		},
+		{
+			name: "Been Up",
+			cover:"https://f4.bcbits.com/img/a4097316864_10.jpg",
+			artist: "Nicoroc",
+			album: "V R I L",
+			audio: "https://storage.googleapis.com/nicoroc_audio/PunkBeenUp%20-1220ZMASTER.wav",
+			color: ["#000000", "#7E3517"],
+			id: uuidv4(),
+			active: false,
+		},
+		
+		
+		
 		//ADD MORE HERE
 	];
 }

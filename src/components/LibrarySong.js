@@ -35,6 +35,7 @@ const LibrarySong = ({ song, setCurrentSong, audioRef, isPlaying, songs, setSong
 			<LibrarySongDescription>
 				<H1>{song.name}</H1>
 				<H2>{song.artist}</H2>
+				<H3>{song.album}</H3>
 			</LibrarySongDescription>
 		</LibrarySongContainer>
 	);
@@ -74,6 +75,10 @@ const H1 = styled.h3`
 `;
 
 const H2 = styled.h4`
+	padding-left: 1rem;
+	font-size: 0.7rem;
+`;
+const H3 = styled.h4`
 	padding-left: 1rem;
 	font-size: 0.7rem;
 `;

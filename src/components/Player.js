@@ -108,6 +108,7 @@ const Player = ({
 					icon={faAngleLeft}
 					size="2x"
 					style={pointer}
+					color="white"
 				/>
 				<FontAwesomeIcon
 					onClick={playSongHandler}
@@ -115,6 +116,7 @@ const Player = ({
 					icon={togglePlayPauseIcon()}
 					size="2x"
 					style={pointer}
+					color="white"
 				/>
 				<FontAwesomeIcon
 					onClick={() => skipTrackHandler("skip-forward")}
@@ -122,6 +124,7 @@ const Player = ({
 					icon={faAngleRight}
 					size="2x"
 					style={pointer}
+					color="white"
 				/>
 			</PlayControlContainer>
 		</PlayerContainer>
@@ -152,11 +155,11 @@ const Track = styled.div`
 	position: relative;
 	border-radius: 1rem;
 	overflow: hidden;
-	background: linear-gradient(to right, ${(p) => p.currentSong.color[0]}, ${(p) => p.currentSong.color[1]});
+	background: linear-gradient(to right, ${(p) => p.currentSong.color[0]}, ${(p) => p.currentSong.color[2]});
 `;
 
 const AnimateTrack = styled.div`
-	background: rgb(204, 204, 204);
+	background: rgb(200, 200, 200);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -171,8 +174,8 @@ const Input = styled.input`
 	-webkit-appearance: none;
 	background: transparent;
 	cursor: pointer;
-	/* padding-top: 1rem;
-	padding-bottom: 1rem; */
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	&:focus {
 		outline: none;
 		-webkit-appearance: none;
@@ -210,6 +213,7 @@ const Input = styled.input`
 const P = styled.p`
 	padding: 0 1rem 0 1rem;
 	user-select: none;
+	color: black;
 `;
 
 const PlayControlContainer = styled.div`

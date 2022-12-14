@@ -23,8 +23,10 @@ const SongContainer = styled.div`
 `;
 
 const Img = styled.img`
-	width: 20%;
-	border-radius: 50%;
+	width: 50vh;
+	height:40vh;
+	border-radius: 20px;
+	
 	@media screen and (max-width: 768px) {
 		width: 50%;
 	}
@@ -32,15 +34,39 @@ const Img = styled.img`
 
 const H1 = styled.h2`
 	padding: 3rem 1rem 1rem 1rem;
+	color: white
 `;
 
 const H2 = styled.h3`
 	font-size: 1rem;
+	color: white;
+	border-radius: 20px;
+	background-color: #333333;
+	opacity: 0.5;
+	margin-inline: 1rem;
+	padding: 1rem 2rem 1rem 2rem;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	&:hover {
+		background-color: lightblue;
+		transition: all 0.3s ease;
+	}
+	
+	cursor: pointer;
+
+
+
+	
+
+	
+
+
+
 `;
 const H3 = styled.h3`
 padding: 2rem  1rem 1rem;
 	font-size: 1rem;
-	color: black;
+	color: white;
 `;
 
 export default Song;

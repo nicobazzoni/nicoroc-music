@@ -41,12 +41,19 @@ const LibrarySong = ({ song, setCurrentSong, audioRef, isPlaying, songs, setSong
 	);
 };
 const LibrarySongContainer = styled.div`
-	padding: 0 2rem 0 2rem;
+	padding: 0 1rem 0 1rem;
+	margin-top: 1rem;
+	margin-right: 1rem;
+	margin-left: 2rem;
+	margin-bottom: 1rem;
 	height: 100px;
-	width: 100%;
+	width: 80%;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: rgb(9, 9, 9);
 	display: flex;
 	transition: all 0.3s ease;
-	background-color: ${(p) => (p.isActive ? "pink" : "white")};
+	background-color: ${(p) => (p.isActive ? "#1b1b1b" : "#1b1b1b")};
 	&:hover {
 		background-color: lightblue;
 		transition: all 0.3s ease;
@@ -62,6 +69,8 @@ const LibrarySongDescription = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-left: 1rem;
+	
 `;
 
 const Img = styled.img`

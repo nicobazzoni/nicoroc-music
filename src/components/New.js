@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-const Credit = () => {
+const New = () => {
 	return (
 		<CreditContainer>
 			<Link href="" target="_blank">
-				Made by nico bazzoni
+				Hello
 			</Link>
 	
 			
@@ -19,14 +19,14 @@ const CreditContainer = styled.div`
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: flex-end;
-	z-index: 9;
-	bottom: 5px;
-	right: 5px;
-	color: rgb(11, 11, 11);
+	z-index: 50;
+	bottom:50px;
+	right: 27px;
+	color: rgb(155, 155, 155);
 	font-size: 0.75rem;
 `;
 
 const Link = styled.a`
-	color: rgb(20, 20, 20);
+	color: rgb(155, 155, 155);
 `;
-export default Credit;
+export default New;

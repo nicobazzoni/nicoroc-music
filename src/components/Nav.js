@@ -13,7 +13,7 @@ const Nav = ({ libraryStatus, setLibraryStatus,  }) => {
 			<H1 libraryStatus={libraryStatus}>D C S T</H1>
 			<Button onClick={() => setLibraryStatus(!libraryStatus)}>
 				
-				<FontAwesomeIcon icon={faMusic} />
+				<FontAwesomeIcon className='fa-solid fa-sharp fa-2x' icon={faMusic} color="white"  />
 		
 
 			</Button>
@@ -46,12 +46,13 @@ const H1 = styled.h1`
 `;
 
 const Button = styled.button`
+    top: 0;
 	background: transparent;
-	border: none;
+	
 	cursor: pointer;
-	border: 2px solid rgb(11,11 , 11);
+	background-color: #110f0f;
 	padding: 1rem;
-	border-radius: 5px;
+	border-radius: 30px;
 	color: rgb(222, 222, 222);
 	transition: all 0.3s ease;
 	&:hover {

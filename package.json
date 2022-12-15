@@ -18,6 +18,7 @@
     "react-player": "^2.11.0",
     "react-router-dom": "^6.4.5",
     "react-scripts": "4.0.1",
+    "react-toastify": "^8.1.0",
     "react-spring": "^9.6.0",
     "styled-components": "^5.2.1",
     "uuid": "^8.3.2",
@@ -53,10 +54,7 @@
   },
   "resolutions": {
     "resolutions": {
-     
       "react-error-overlay": "6.0.9"
     }
-
   }
-  
 }

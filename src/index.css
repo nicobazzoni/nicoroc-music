@@ -169,7 +169,13 @@ scroll-snap-type: mandatory;
   
 
 }
-
+.h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: aqua;
+  top: 3.3%;
+}
 img {
   width: 250px;
   object-fit: cover;

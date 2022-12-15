@@ -21,6 +21,12 @@ import Contact from './Contact'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faCameraRetro, faVideo, faScroll } from "@fortawesome/free-solid-svg-icons";
 import {faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from 'react-toastify';
+
+  import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const Music = () => {
 	// Ref
 	const audioRef = useRef(null);
@@ -35,9 +41,11 @@ const Music = () => {
 		duration: 0,
 	});
 
-	
 
-   const updateTimeHandler = (e) => {
+	
+		
+	
+		const updateTimeHandler = (e) => {
 		const currentTime = e.target.currentTime;
 		const duration = e.target.duration;
 		setSongInfo({ ...songInfo, currentTime, duration });
@@ -75,8 +83,13 @@ const Music = () => {
     const [openVideoModal, setOpenVideoModal, ] = useState(false);
 	const [openContactModal, setOpenContactModal, ] = useState(false);
 	
-	const openAndCloseModal = () => {
-		setOpenModal(!openModal);
+	
+   const openAndCloseModal = () => {
+		setOpenModal(!openModal); 
+		
+		
+		
+		
 	};
 	
     
@@ -84,9 +97,27 @@ const Music = () => {
 		setOpenVideoModal(!openVideoModal);
 	};
 
-	const openAndCloseContactModal = () => {
+	
+
+	  const openAndCloseContactModal = () => {
 		setOpenContactModal(!openContactModal);
+		
+		
+			
+			  	
+	  
+	
+		
 	};
+	
+		//toast message 
+	const notify = () => toast("Scroll Down for Contact !");
+	
+
+	
+	
+
+
 
 
 
@@ -152,24 +183,35 @@ const Music = () => {
 		 style={pointer}
 			color="white"  
 			
-		    onClick={() => openAndCloseContactModal()} 
+		    onClick={() => { {openAndCloseContactModal(); notify();} }} 
+		
 		 
 		 />
+		  <ToastContainer />
+
+
 			
 		</div>
 
-			
+		
+
+	
 	</div>
 		<modalContainer>
 	    <Modal 
         open={openModal} 
       	onClose={() => setOpenModal(false)} />
      	</modalContainer>
+
+		<contactContainer>
 		
-	<Contact  openContact={openContactModal}
-	onContactClose={() => setOpenContactModal(false)}/> 
+	<Contact  
+	openContact={openContactModal}
+	
+	onContactClose={() => {{ setOpenContactModal(false); }} }/> 
 		
-			
+
+			</contactContainer>
 	
 		<videoModalContainer >
 			<Gallery2 
@@ -179,7 +221,9 @@ const Music = () => {
 
 		
 			
-			
+		  
+		
+		
 			
 	
 
@@ -220,6 +264,13 @@ const Button = styled.button`
   font-size: 24px;
   cursor: pointer;
 `;
+
+const StyledError = styled.div`
+  color: red;
+  font-weight: 800;
+  margin: 0 0 40px 0;
+`;
+
 
 
 

@@ -15,9 +15,12 @@ import data from "../data";
 import Gallery from "react-photo-gallery";
 import Photos from './Gallery'
 import { photos } from "./photos";
+import Gallery2 from './Gallery'
+import Contact from './Contact'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCamera } from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faCameraRetro, faVideo, faScroll } from "@fortawesome/free-solid-svg-icons";
+import {faCoffee } from "@fortawesome/free-solid-svg-icons";
 const Music = () => {
 	// Ref
 	const audioRef = useRef(null);
@@ -32,19 +35,9 @@ const Music = () => {
 		duration: 0,
 	});
 
-	//modal
+	
 
-	const [openModal, setOpenModal, ] = useState(false);
-    
-	const openAndCloseModal = () => {
-		setOpenModal(!openModal);
-	};
-
-   
-
-
-	// Functions
-	const updateTimeHandler = (e) => {
+   const updateTimeHandler = (e) => {
 		const currentTime = e.target.currentTime;
 		const duration = e.target.duration;
 		setSongInfo({ ...songInfo, currentTime, duration });
@@ -74,6 +67,28 @@ const Music = () => {
 			audioRef.current.play();
 		}
 	};
+
+
+	//modals
+
+	const [openModal, setOpenModal, ] = useState(false);
+    const [openVideoModal, setOpenVideoModal, ] = useState(false);
+	const [openContactModal, setOpenContactModal, ] = useState(false);
+	
+	const openAndCloseModal = () => {
+		setOpenModal(!openModal);
+	};
+	
+    
+	const openAndCloseVideoModal = () => {
+		setOpenVideoModal(!openVideoModal);
+	};
+
+	const openAndCloseContactModal = () => {
+		setOpenContactModal(!openContactModal);
+	};
+
+
 
 	return (
 
@@ -112,7 +127,7 @@ const Music = () => {
 
 				<div >
 			<FontAwesomeIcon 
-			className="camera fa-solid fa-camera fa-5x "
+			className="camera fa-solid fa-camera fa-3x "
 			
 			style={pointer}
 			color="white"  
@@ -122,26 +137,56 @@ const Music = () => {
 		
 			
 			 />
-
-
-					</div>
-     
-	
-    
-      </div>
-         <modalContainer>
-	    <Modal 
-      open={openModal} 
-      onClose={() => setOpenModal(false)} />
-     
-		</modalContainer>
-	
-             	
+			 <FontAwesomeIcon 
+			className="videoButton fa-sharp fa-solid fa-video fa-3x" 
 			
-		</AppContainer>
- 
+			style={pointer}
+			color="white"  
+			icon={faVideo}
+		    onClick={() => openAndCloseVideoModal()} 
+			
+		/>
+
+         <FontAwesomeIcon className=" scroll fa-sharp fa-solid fa-scroll-old fa-3x" 
+		 icon={faScroll}
+		 style={pointer}
+			color="white"  
+			
+		    onClick={() => openAndCloseContactModal()} 
+		 
+		 />
+			
+		</div>
+
+			
+	</div>
+		<modalContainer>
+	    <Modal 
+        open={openModal} 
+      	onClose={() => setOpenModal(false)} />
+     	</modalContainer>
 		
+	<Contact  openContact={openContactModal}
+	onContactClose={() => setOpenContactModal(false)}/> 
 		
+			
+	
+		<videoModalContainer >
+			<Gallery2 
+			openVideo={openVideoModal}
+			onVideoClose={() => setOpenVideoModal(false)}/>
+		</videoModalContainer>
+
+		
+			
+			
+			
+	
+
+
+
+		</AppContainer>    	
+			
 	);
 
 	

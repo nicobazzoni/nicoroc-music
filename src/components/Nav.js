@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMusic } from "@fortawesome/free-solid-svg-icons";
+import { faMusic, faVideo } from "@fortawesome/free-solid-svg-icons";
 
-const Nav = ({ libraryStatus, setLibraryStatus }) => {
+const pointer = { cursor: "pointer" };
+
+const Nav = ({ libraryStatus, setLibraryStatus,  }) => {
+
+
 	return (
 		<NavContainer>
 			<H1 libraryStatus={libraryStatus}>D C S T</H1>
 			<Button onClick={() => setLibraryStatus(!libraryStatus)}>
 				
 				<FontAwesomeIcon icon={faMusic} />
+		
+
 			</Button>
 		</NavContainer>
 	);

@@ -17,9 +17,12 @@ import Photos from './Gallery'
 import { photos } from "./photos";
 import Gallery2 from './Gallery'
 import Contact from './Contact'
+import ResizeObserver from 'resize-observer-polyfill';
+import 'resize-observer-polyfill/dist/ResizeObserver.global'
+
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCamera, faCameraRetro, faVideo, faScroll } from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faCameraRetro, faVideo, faScroll, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import {faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -86,10 +89,6 @@ const Music = () => {
 	
    const openAndCloseModal = () => {
 		setOpenModal(!openModal); 
-		
-		
-		
-		
 	};
 	
     
@@ -101,25 +100,13 @@ const Music = () => {
 
 	  const openAndCloseContactModal = () => {
 		setOpenContactModal(!openContactModal);
-		
-		
-			
-			  	
-	  
-	
-		
 	};
+
+	
 	
 		//toast message 
-	const notify = () => toast("Scroll Down for Contact !");
-	
-
 	
 	
-
-
-
-
 
 	return (
 
@@ -178,16 +165,8 @@ const Music = () => {
 			
 		/>
 
-         <FontAwesomeIcon className=" scroll fa-sharp fa-solid fa-scroll-old fa-3x" 
-		 icon={faScroll}
-		 style={pointer}
-			color="white"  
-			
-		    onClick={() => { {openAndCloseContactModal(); notify();} }} 
-		
-		 
-		 />
-		  <ToastContainer />
+       
+		  
 
 
 			
@@ -226,10 +205,11 @@ const Music = () => {
 		
 			
 	
+		<ToastContainer autoClose={2000} />
+         
 
-
-
-		</AppContainer>    	
+		</AppContainer>   
+		 	
 			
 	);
 

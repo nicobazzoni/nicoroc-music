@@ -2,6 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight, faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
+import { ToastContainer, toast } from 'react-toastify';
+
+  import 'react-toastify/dist/ReactToastify.css';
 
 // style
 const pointer = { cursor: "pointer" };
@@ -27,6 +30,34 @@ const Player = ({
 			setIsPlaying(!isPlaying);
 		}
 	};
+     
+	
+	
+	const shouldAddEventHandler = true;
+
+	const handleClick = event => {
+	  toast("Now Playing: " + currentSong.name + " by " + currentSong.artist, {
+		position: "top-center",
+		autoClose: 3000,
+		hideProgressBar: false,
+		closeOnClick: true,
+        pauseOnHover: true,
+		draggable: true,
+		theme: "dark",
+
+
+
+
+		
+		
+		
+	  }); 
+	};
+	
+
+	   
+	
+	
 
 	const togglePlayPauseIcon = () => {
 		if (isPlaying) {
@@ -36,7 +67,7 @@ const Player = ({
 		}
 	};
 
-	const getTime = (time) => {
+	const getTime = (time) => { 
 		let minute = Math.floor(time / 60);
 		let second = ("0" + Math.floor(time % 60)).slice(-2);
 		return `${minute}:${second}`;
@@ -83,6 +114,8 @@ const Player = ({
 		setSongs(newSongs);
 	};
 
+
+
 	return (
 		<PlayerContainer>
 			<TimeControlContainer>
@@ -111,12 +144,14 @@ const Player = ({
 					color="white"
 				/>
 				<FontAwesomeIcon
-					onClick={playSongHandler}
+				   
+					onClick={{playSongHandler} ? handleClick : null}	
 					className="play"
 					icon={togglePlayPauseIcon()}
 					size="2x"
 					style={pointer}
 					color="white"
+					value="play"
 				/>
 				<FontAwesomeIcon
 					onClick={() => skipTrackHandler("skip-forward")}
@@ -127,6 +162,8 @@ const Player = ({
 					color="white"
 				/>
 			</PlayControlContainer>
+
+			
 		</PlayerContainer>
 	);
 };

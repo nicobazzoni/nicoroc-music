@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMusic, faVideo } from "@fortawesome/free-solid-svg-icons";
+import { faMusic, faPaperPlane, faVideo } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from 'react-toastify';
 
+  import 'react-toastify/dist/ReactToastify.css';
 const pointer = { cursor: "pointer" };
 
 const Nav = ({ libraryStatus, setLibraryStatus,  }) => {
 
+	function SendMail()  {
+   window.location.href =`mailto:nicobazzoni@gmail.com`;
+		
+	  
+	  }
 
 	return (
 		<NavContainer>
@@ -14,9 +21,17 @@ const Nav = ({ libraryStatus, setLibraryStatus,  }) => {
 			<Button onClick={() => setLibraryStatus(!libraryStatus)}>
 				
 				<FontAwesomeIcon className='fa-solid fa-sharp fa-2x' icon={faMusic} color="white"  />
+		  </Button> 
+			
+		<FontAwesomeIcon 
+		className="scroll fa-solid fa-paper-plane fa-3x" 
+		 icon={faPaperPlane}
+		 style={pointer}
+		color="white"  
+		onClick={SendMail } 
 		
-
-			</Button>
+		 
+		 />
 		</NavContainer>
 	);
 };

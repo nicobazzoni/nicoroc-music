@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
-
+import { useForm, SubmitHandler } from "react-hook-form";
 import styled, { createGlobalStyle, css } from 'styled-components';
+
+
+
+
 const Contact = ({ openContact,onContactClose }) => {
-const [state, setState] = useState(initalState);
+
+
+
+
+  const [state, setState] = useState(initalState);
 const [error, setError] = useState('');
 
   const handleSubmit = e => {
@@ -22,15 +30,21 @@ const [error, setError] = useState('');
     // console.log(test);
 
     console.log("Succeeded!!!")
-  };
+
+   };
 
   const handleInput = e => {
     const inputName = e.currentTarget.name;
     const value = e.currentTarget.value;
 
-    setState(prev => ({ ...prev, [inputName]: value }));
+  setState(prev => ({ ...prev, [inputName]: value })); 
   };
     
+  const SendMail = e => {
+   window.location.href =`mailto:nicobazzoni@gmail.com`;
+    
+  
+  }
 
  
 
@@ -46,8 +60,9 @@ const [error, setError] = useState('');
           </p> 
           <GlobalStyle />
     <div>
-      <StyledFormWrapper >
-        <StyledForm onSubmit={handleSubmit}>
+      <StyledFormWrapper  >
+        
+        <StyledForm action="mailto:nicobazzoni@gmail.com" method="GET"  onSubmit={handleSubmit}>
           <h2>Contact Form</h2>
           <label htmlFor="name">Name</label>
           <StyledInput
@@ -97,7 +112,7 @@ const [error, setError] = useState('');
               <p>{error}</p>
             </StyledError>
           )}
-          <StyledButton type="submit">Send Message</StyledButton>
+          <StyledButton onClick={SendMail()}  type="submit">Send Message</StyledButton>
         </StyledForm>
       </StyledFormWrapper>
       </div> 

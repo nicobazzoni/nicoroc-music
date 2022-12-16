@@ -38,7 +38,7 @@ code {
 
 .camera {
   position: fixed;
-  top: 30%;
+  top: 27%;
   right: 5%;
   transform: translate(10%, -30%);
   z-index: 2;
@@ -116,7 +116,7 @@ code {
 
 .videoButton {
   position: fixed;
-  top: 18.0%;
+  top: 19.0%;
   right: 5%;
   transform: translate(10%, -30%);
   z-index: 1;
@@ -134,11 +134,13 @@ code {
 .videoButton:hover {
   background-color: #646065;
   color: #ffffff;
+  
 }
 
 .camera:hover {
   background-color: #646065;
   color: #ffffff;
+  animation: pulse 2s infinite;
 }
 
 
@@ -174,8 +176,8 @@ scroll-snap-type: mandatory;
 
 .scroll {
   position: fixed;
-  top: 4.0%;
-  right: 40%;
+  top: 35%;
+  right: 5%;
   transform: translate(10%, -30%);
   z-index: 1;
   border-radius: 50%;
@@ -184,7 +186,14 @@ scroll-snap-type: mandatory;
   background-color: #110f0f;
   padding: 8px 16px;
   
+  
 
+}
+
+.scroll:hover {
+  background-color: #646065;
+  color: #ffffff;
+  animation: pulse 2s infinite;
 }
 .h4 {
   font-size: 1.5rem;

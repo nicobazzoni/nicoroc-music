@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import Movielist from './Movielist';
+
 import ReactPlayer from "react-player";
 
 

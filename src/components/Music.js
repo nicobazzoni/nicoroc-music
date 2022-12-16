@@ -8,13 +8,11 @@ import Song from "./Song";
 import Library from "./Library";
 import Nav from "./Nav";
 import Credit from "./Credit";
-import New from './New'
-import { Iocamera } from 'react-icons'
+
 // Import data
 import data from "../data";
-import Gallery from "react-photo-gallery";
-import Photos from './Gallery'
-import { photos } from "./photos";
+
+
 import Gallery2 from './Gallery'
 import Contact from './Contact'
 import ResizeObserver from 'resize-observer-polyfill';
@@ -22,8 +20,8 @@ import 'resize-observer-polyfill/dist/ResizeObserver.global'
 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCamera, faCameraRetro, faVideo, faScroll, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import {faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faVideo } from "@fortawesome/free-solid-svg-icons";
+
 import { ToastContainer, toast } from 'react-toastify';
 
   import 'react-toastify/dist/ReactToastify.css';
@@ -98,17 +96,11 @@ const Music = () => {
 
 	
 
-	  const openAndCloseContactModal = () => {
-		setOpenContactModal(!openContactModal);
-	};
-
-	
-	
-		//toast message 
-	
 	
 
-	return (
+	
+	
+return (
 
 		
 		<AppContainer libraryStatus={libraryStatus}>

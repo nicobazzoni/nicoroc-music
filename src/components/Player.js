@@ -33,7 +33,7 @@ const Player = ({
      
 	
 	
-	const shouldAddEventHandler = true;
+	
 
 	const handleClick = event => {
 	  toast("Now Playing: " + currentSong.name + " by " + currentSong.artist, {
@@ -44,14 +44,7 @@ const Player = ({
         pauseOnHover: true,
 		draggable: true,
 		theme: "dark",
-
-
-
-
-		
-		
-		
-	  }); 
+ 		}); 
 	};
 	
 
@@ -114,6 +107,12 @@ const Player = ({
 		setSongs(newSongs);
 	};
 
+	function ToastPlay() {
+		playSongHandler() 
+		handleClick(); 
+
+
+	}
 
 
 	return (
@@ -145,7 +144,7 @@ const Player = ({
 				/>
 				<FontAwesomeIcon
 				   
-					onClick={{playSongHandler} ? handleClick : null}	
+					onClick={ToastPlay}	
 					className="play"
 					icon={togglePlayPauseIcon()}
 					size="2x"
